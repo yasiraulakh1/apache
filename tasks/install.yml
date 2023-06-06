@@ -1,0 +1,5 @@
+---
+- name: Install the httpd1 Servt
+  yum:
+    name: httpd
+    state: latest  

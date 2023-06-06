@@ -1,0 +1,13 @@
+---
+- name: configure the firewall to allow http traffic
+  firewalld:
+    service: http
+    permanent: yes
+    state: enabled
+- name: Restart the firewall
+  service:
+    name: firewalld
+    state: reloaded
+
+
+

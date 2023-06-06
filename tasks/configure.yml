@@ -1,0 +1,10 @@
+---
+- name: Configure httpd index.html file
+  template:
+    src: templates/index.j2
+    dest: /var/www/html/index.html
+- name: restart the http server
+  service:
+    name: httpd
+    state: restarted
+
